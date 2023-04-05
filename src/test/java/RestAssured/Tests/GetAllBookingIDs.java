@@ -3,10 +3,11 @@ package RestAssured.Tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import ResrAssured.Utils.BaseTest;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class GetAllBookingIDs {
+public class GetAllBookingIDs extends BaseTest{
 
 	@Test
 	public void getAllBookingID() {

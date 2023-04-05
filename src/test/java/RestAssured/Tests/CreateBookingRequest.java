@@ -4,12 +4,13 @@ import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import ResrAssured.Utils.BaseTest;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import net.minidev.json.JSONObject;
 
-public class CreateBookingRequest {
+public class CreateBookingRequest extends BaseTest {
 
 //	{
 //	    "firstname": "Vishwa",
@@ -22,8 +23,11 @@ public class CreateBookingRequest {
 //	    },
 //	    "additionalneeds": "super bowls"
 //	}
-	@Test(invocationCount = 5)
+	
+	static int bookingid;
+	@Test
 	public void postBookingRequest() {
+		
 		JSONObject bookingDetails =  new JSONObject();
 		JSONObject bookingDates = new JSONObject();
 		
@@ -37,7 +41,8 @@ public class CreateBookingRequest {
 		bookingDetails.put("bookingdates", bookingDates);
 		bookingDetails.put("additionalneeds", "Rest Assured");
 		
-		Response response = RestAssured
+		Response response=
+		RestAssured
 		.given()
 			.contentType(ContentType.JSON)
 			.body(bookingDetails.toString())
@@ -49,7 +54,11 @@ public class CreateBookingRequest {
 			.statusCode(200)
 			.body("booking.firstname", Matchers.equalTo("Vishwa"))
 			.body("booking.bookingdates.checkin", Matchers.equalTo("2023-01-01"))
+			.body("booking.totalprice", Matchers.equalTo(1000))
+			.body("booking.depositpaid", Matchers.equalTo(true))
 			.extract().response();
-//		Assert.assertEquals(response.getBody().toString().contains("Vishwa"), true);
+
+		bookingid = response.path("bookingid");
+		
 	}
 }

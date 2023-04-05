@@ -1,0 +1,11 @@
+{
+    "firstname": "Vishwanath",
+    "lastname": "Mudhol",
+    "totalprice": 1128,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2023-02-01",
+        "checkout": "2023-02-01"
+    },
+    "additionalneeds": "super bowls"
+}
