@@ -25,7 +25,7 @@ public class CreateBookingRequest extends BaseTest {
 //	}
 	
 	static int bookingid;
-	@Test
+	@Test  
 	public void postBookingRequest() {
 		
 		JSONObject bookingDetails =  new JSONObject();

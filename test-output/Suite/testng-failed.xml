@@ -3,17 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="RestAssured.Tests.CreateBookingRequest">
-        <methods>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- RestAssured.Tests.CreateBookingRequest -->
-      <class name="RestAssured.Tests.CreateBookingUsingPojoClasses">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="createBookingWithPojo"/>
-        </methods>
-      </class> <!-- RestAssured.Tests.CreateBookingUsingPojoClasses -->
       <class name="RestAssured.Tests.CreateBookingUsingTextFile">
         <methods>
           <include name="beforeMethod"/>
@@ -24,11 +13,42 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- RestAssured.Tests.GetAllBookingIDs -->
-      <class name="RestAssured.Tests.GetBookingDetails">
+      <class name="RestAssured.Tests.DeleteAPIRequest">
         <methods>
           <include name="beforeMethod"/>
         </methods>
+      </class> <!-- RestAssured.Tests.DeleteAPIRequest -->
+      <class name="RestAssured.Tests.PatchRequest">
+        <methods>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.PatchRequest -->
+      <class name="RestAssured.Tests.CreateBookingRequest">
+        <methods>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.CreateBookingRequest -->
+      <class name="RestAssured.Tests.GetBookingDetails">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="getBookingDetails"/>
+        </methods>
       </class> <!-- RestAssured.Tests.GetBookingDetails -->
+      <class name="RestAssured.Tests.GenerateToken">
+        <methods>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.GenerateToken -->
+      <class name="RestAssured.Tests.UpdateBookingDetaiils">
+        <methods>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.UpdateBookingDetaiils -->
+      <class name="RestAssured.Tests.CreateBookingUsingPojoClasses">
+        <methods>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.CreateBookingUsingPojoClasses -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

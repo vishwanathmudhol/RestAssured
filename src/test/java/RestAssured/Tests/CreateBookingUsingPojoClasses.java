@@ -1,5 +1,9 @@
 package RestAssured.Tests;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.testng.annotations.Test;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -8,8 +12,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import PojoClasses.Booking;
 import PojoClasses.BookingDates;
 import ResrAssured.Utils.BaseTest;
+import ResrAssured.Utils.FilesConstants;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
 public class CreateBookingUsingPojoClasses extends BaseTest{
@@ -19,6 +25,8 @@ public class CreateBookingUsingPojoClasses extends BaseTest{
 	public void createBookingWithPojo() {
 		 
 		try {
+		
+			String jsonSchema = FileUtils.readFileToString(new File(FilesConstants.postReqJSONSchema), "UTF-8");
 			BookingDates dates=new BookingDates("2023-04-06", "2023-04-07");
 			Booking book=new Booking("Vishwanath", "Mudhol", 1500, true, dates, "Fan");
 			
@@ -45,20 +53,24 @@ public class CreateBookingUsingPojoClasses extends BaseTest{
 			
 			bookingID = response.path("bookingid");
 			
-			Response getResponse=
+//			Response getResponse=
 			RestAssured
 			.given()
 				.contentType(ContentType.JSON)
 				.baseUri("https://restful-booker.herokuapp.com/booking")
 			.when()
-				.get("/{bookingID}", bookingID)
+				.get("/{bookingid}", bookingID)
 			.then()
 				.assertThat()
 				.statusCode(200)
-			.extract().response();
+				.body(JsonSchemaValidator.matchesJsonSchema(jsonSchema));
 			
-			System.out.println(getResponse.body().asString());
+			System.out.println(jsonSchema);
+//			System.out.println(getResponse.body().asString());
 		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

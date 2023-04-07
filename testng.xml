@@ -4,10 +4,16 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="RestAssured.Tests.CreateBookingRequest"/>
-      <class name="RestAssured.Tests.GetBookingDetails"/>
+      <class name="RestAssured.Tests.GenerateToken"/>
+      <class name="RestAssured.Tests.UpdateBookingDetaiils"/>  
+      <class name="RestAssured.Tests.PatchRequest"/>  
+      <class name="RestAssured.Tests.GetBookingDetails"/>   
+       <class name="RestAssured.Tests.DeleteAPIRequest"/>
       <class name="RestAssured.Tests.CreateBookingUsingTextFile"/>
       <class name="RestAssured.Tests.GetAllBookingIDs"/>
       <class name="RestAssured.Tests.CreateBookingUsingPojoClasses"/>
+       
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

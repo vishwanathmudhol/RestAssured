@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="RestAssured.Tests.CreateBookingUsingTextFile">
+      <class name="RestAssured.Tests.UpdateBookingDetaiils">
         <methods>
           <include name="beforeMethod"/>
-          <include name="postAPIRequest"/>
+          <include name="updateBooking"/>
         </methods>
-      </class> <!-- RestAssured.Tests.CreateBookingUsingTextFile -->
+      </class> <!-- RestAssured.Tests.UpdateBookingDetaiils -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

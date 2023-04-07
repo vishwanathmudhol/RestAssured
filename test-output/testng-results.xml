@@ -1,60 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="9944" started-at="2023-04-06T10:52:56Z" finished-at="2023-04-06T10:53:06Z">
+  <suite name="Suite" duration-ms="14836" started-at="2023-04-07T11:19:46Z" finished-at="2023-04-07T11:20:01Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="9944" started-at="2023-04-06T10:52:56Z" finished-at="2023-04-06T10:53:06Z">
-      <class name="RestAssured.Tests.CreateBookingUsingTextFile">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.CreateBookingUsingTextFile@11a9e7c8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2023-04-06T16:23:01Z" finished-at="2023-04-06T16:23:01Z">
+    <test name="Test" duration-ms="14836" started-at="2023-04-07T11:19:46Z" finished-at="2023-04-07T11:20:01Z">
+      <class name="RestAssured.Tests.UpdateBookingDetaiils">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.UpdateBookingDetaiils@12b0404f]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2023-04-07T16:49:50Z" finished-at="2023-04-07T16:49:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="postAPIRequest()[pri:0, instance:RestAssured.Tests.CreateBookingUsingTextFile@11a9e7c8]" name="postAPIRequest" duration-ms="1225" started-at="2023-04-06T16:23:01Z" finished-at="2023-04-06T16:23:02Z">
+        <test-method status="PASS" signature="updateBooking()[pri:0, instance:RestAssured.Tests.UpdateBookingDetaiils@12b0404f]" name="updateBooking" duration-ms="1209" started-at="2023-04-07T16:49:50Z" finished-at="2023-04-07T16:49:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateBooking -->
+      </class> <!-- RestAssured.Tests.UpdateBookingDetaiils -->
+      <class name="RestAssured.Tests.CreateBookingUsingTextFile">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.CreateBookingUsingTextFile@6193932a]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2023-04-07T16:49:55Z" finished-at="2023-04-07T16:49:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="postAPIRequest()[pri:0, instance:RestAssured.Tests.CreateBookingUsingTextFile@6193932a]" name="postAPIRequest" duration-ms="1247" started-at="2023-04-07T16:49:55Z" finished-at="2023-04-07T16:49:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postAPIRequest -->
       </class> <!-- RestAssured.Tests.CreateBookingUsingTextFile -->
+      <class name="RestAssured.Tests.GenerateToken">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.GenerateToken@419c5f1a]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2023-04-07T16:49:49Z" finished-at="2023-04-07T16:49:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="tokenGeneration()[pri:0, instance:RestAssured.Tests.GenerateToken@419c5f1a]" name="tokenGeneration" duration-ms="1191" started-at="2023-04-07T16:49:49Z" finished-at="2023-04-07T16:49:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tokenGeneration -->
+      </class> <!-- RestAssured.Tests.GenerateToken -->
+      <class name="RestAssured.Tests.PatchRequest">
+        <test-method status="PASS" signature="patchRequest()[pri:0, instance:RestAssured.Tests.PatchRequest@769e7ee8]" name="patchRequest" duration-ms="1140" started-at="2023-04-07T16:49:52Z" finished-at="2023-04-07T16:49:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patchRequest -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.PatchRequest@769e7ee8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2023-04-07T16:49:52Z" finished-at="2023-04-07T16:49:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+      </class> <!-- RestAssured.Tests.PatchRequest -->
       <class name="RestAssured.Tests.GetBookingDetails">
-        <test-method status="PASS" signature="getBookingDetails()[pri:0, instance:RestAssured.Tests.GetBookingDetails@3b07a0d6]" name="getBookingDetails" duration-ms="1313" started-at="2023-04-06T16:23:00Z" finished-at="2023-04-06T16:23:01Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.GetBookingDetails@5276e6b0]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2023-04-07T16:49:53Z" finished-at="2023-04-07T16:49:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="getBookingDetails()[pri:0, instance:RestAssured.Tests.GetBookingDetails@5276e6b0]" name="getBookingDetails" duration-ms="1235" started-at="2023-04-07T16:49:53Z" finished-at="2023-04-07T16:49:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBookingDetails -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.GetBookingDetails@3b07a0d6]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2023-04-06T16:23:00Z" finished-at="2023-04-06T16:23:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
       </class> <!-- RestAssured.Tests.GetBookingDetails -->
       <class name="RestAssured.Tests.CreateBookingRequest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.CreateBookingRequest@3d121db3]" name="beforeMethod" is-config="true" duration-ms="445" started-at="2023-04-06T16:22:56Z" finished-at="2023-04-06T16:22:57Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.CreateBookingRequest@56de5251]" name="beforeMethod" is-config="true" duration-ms="355" started-at="2023-04-07T16:49:46Z" finished-at="2023-04-07T16:49:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="postBookingRequest()[pri:0, instance:RestAssured.Tests.CreateBookingRequest@3d121db3]" name="postBookingRequest" duration-ms="2814" started-at="2023-04-06T16:22:57Z" finished-at="2023-04-06T16:23:00Z">
+        <test-method status="PASS" signature="postBookingRequest()[pri:0, instance:RestAssured.Tests.CreateBookingRequest@56de5251]" name="postBookingRequest" duration-ms="2604" started-at="2023-04-07T16:49:47Z" finished-at="2023-04-07T16:49:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postBookingRequest -->
       </class> <!-- RestAssured.Tests.CreateBookingRequest -->
       <class name="RestAssured.Tests.GetAllBookingIDs">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.GetAllBookingIDs@3901d134]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2023-04-06T16:23:02Z" finished-at="2023-04-06T16:23:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="getAllBookingID()[pri:0, instance:RestAssured.Tests.GetAllBookingIDs@3901d134]" name="getAllBookingID" duration-ms="1243" started-at="2023-04-06T16:23:02Z" finished-at="2023-04-06T16:23:03Z">
+        <test-method status="PASS" signature="getAllBookingID()[pri:0, instance:RestAssured.Tests.GetAllBookingIDs@647fd8ce]" name="getAllBookingID" duration-ms="1703" started-at="2023-04-07T16:49:56Z" finished-at="2023-04-07T16:49:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAllBookingID -->
-      </class> <!-- RestAssured.Tests.GetAllBookingIDs -->
-      <class name="RestAssured.Tests.CreateBookingUsingPojoClasses">
-        <test-method status="PASS" signature="createBookingWithPojo()[pri:0, instance:RestAssured.Tests.CreateBookingUsingPojoClasses@14d3bc22]" name="createBookingWithPojo" duration-ms="2869" started-at="2023-04-06T16:23:03Z" finished-at="2023-04-06T16:23:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createBookingWithPojo -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.CreateBookingUsingPojoClasses@14d3bc22]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2023-04-06T16:23:03Z" finished-at="2023-04-06T16:23:03Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.GetAllBookingIDs@647fd8ce]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2023-04-07T16:49:56Z" finished-at="2023-04-07T16:49:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
+      </class> <!-- RestAssured.Tests.GetAllBookingIDs -->
+      <class name="RestAssured.Tests.DeleteAPIRequest">
+        <test-method status="PASS" signature="deleteAPI()[pri:0, instance:RestAssured.Tests.DeleteAPIRequest@71b1176b]" name="deleteAPI" duration-ms="1229" started-at="2023-04-07T16:49:54Z" finished-at="2023-04-07T16:49:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAPI -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.DeleteAPIRequest@71b1176b]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2023-04-07T16:49:54Z" finished-at="2023-04-07T16:49:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+      </class> <!-- RestAssured.Tests.DeleteAPIRequest -->
+      <class name="RestAssured.Tests.CreateBookingUsingPojoClasses">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:RestAssured.Tests.CreateBookingUsingPojoClasses@159f197]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2023-04-07T16:49:58Z" finished-at="2023-04-07T16:49:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="createBookingWithPojo()[pri:0, instance:RestAssured.Tests.CreateBookingUsingPojoClasses@159f197]" name="createBookingWithPojo" duration-ms="2891" started-at="2023-04-07T16:49:58Z" finished-at="2023-04-07T16:50:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createBookingWithPojo -->
       </class> <!-- RestAssured.Tests.CreateBookingUsingPojoClasses -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

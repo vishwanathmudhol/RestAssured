@@ -27,7 +27,7 @@ public class GetBookingDetails extends BaseTest{
 		.then()
 			.assertThat()
 			.statusCode(200)
-			.body("firstname", Matchers.equalTo("Vishwa"))
+			.body("firstname", Matchers.equalTo("Vrishag"))
 			.body("lastname", Matchers.equalTo("Mudhol"))
 		.extract().response();
 		
