@@ -4,15 +4,17 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import com.jayway.jsonpath.JsonPath;
 
 import ResrAssured.Utils.BaseTest;
 import ResrAssured.Utils.FilesConstants;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import net.minidev.json.JSONArray;
 
 
 
@@ -36,6 +38,14 @@ public class CreateBookingUsingTextFile extends BaseTest{
 				.assertThat()
 				.statusCode(200)
 			.extract().response();
+			
+			JSONArray jsonFname = JsonPath.read(response.body().asString(), "$.booking..firstname");
+			String firstName = (String) jsonFname.get(0);
+			Assert.assertEquals(firstName, "Vishwanath");
+			
+			JSONArray jsonCheckIn = JsonPath.read(response.body().asString(), "$.booking.bookingdates..checkin");
+			String checkInDate = (String) jsonCheckIn.get(0);
+			Assert.assertEquals(checkInDate, "2023-02-01");
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

@@ -5,7 +5,9 @@
     <classes>
       <class name="RestAssured.Tests.CreateBookingRequest"/>
       <class name="RestAssured.Tests.GetBookingDetails"/>
+      <class name="RestAssured.Tests.CreateBookingUsingTextFile"/>
       <class name="RestAssured.Tests.GetAllBookingIDs"/>
+      <class name="RestAssured.Tests.CreateBookingUsingPojoClasses"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -3,22 +3,32 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="RestAssured.Tests.GetBookingDetails">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="getBookingDetails"/>
-        </methods>
-      </class> <!-- RestAssured.Tests.GetBookingDetails -->
-      <class name="RestAssured.Tests.GetAllBookingIDs">
-        <methods>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- RestAssured.Tests.GetAllBookingIDs -->
       <class name="RestAssured.Tests.CreateBookingRequest">
         <methods>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- RestAssured.Tests.CreateBookingRequest -->
+      <class name="RestAssured.Tests.CreateBookingUsingPojoClasses">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="createBookingWithPojo"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.CreateBookingUsingPojoClasses -->
+      <class name="RestAssured.Tests.CreateBookingUsingTextFile">
+        <methods>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.CreateBookingUsingTextFile -->
+      <class name="RestAssured.Tests.GetAllBookingIDs">
+        <methods>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.GetAllBookingIDs -->
+      <class name="RestAssured.Tests.GetBookingDetails">
+        <methods>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.GetBookingDetails -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

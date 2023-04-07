@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
     <classes>
+      <class name="RestAssured.Tests.CreateBookingRequest">
+        <methods>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.CreateBookingRequest -->
+      <class name="RestAssured.Tests.CreateBookingUsingPojoClasses">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="createBookingWithPojo"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.CreateBookingUsingPojoClasses -->
       <class name="RestAssured.Tests.CreateBookingUsingTextFile">
         <methods>
           <include name="beforeMethod"/>
-          <include name="postAPIRequest"/>
         </methods>
       </class> <!-- RestAssured.Tests.CreateBookingUsingTextFile -->
+      <class name="RestAssured.Tests.GetAllBookingIDs">
+        <methods>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.GetAllBookingIDs -->
+      <class name="RestAssured.Tests.GetBookingDetails">
+        <methods>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- RestAssured.Tests.GetBookingDetails -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
